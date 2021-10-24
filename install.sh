@@ -1,10 +1,11 @@
-#!/bin/sh
+#! /bin/sh
 sudo apt install debootstrap libc6-dev-arm64-cross gcc-aarch64-linux-gnu qemu-system-arm -y
 mkdir focal
+debootstrap foreign focal focal
 sudo mount -o bind /dev focal/dev && sudo mount -o bind /dev/pts focal/dev/pts && sudo mount -t sysfs sys focal/sys && sudo mount -t proc proc focal/proc
 #script de creación de archivo de instalación
 > /home/config.sh
-cat <<+ >> /home/config.sh
+cat <<+>> /home/config.sh
 #!/bin/sh
 echo " Configurando debootstrap segunda fase"
 sleep 3
