@@ -24,7 +24,7 @@ dpkg-reconfigure locales
 dpkg-reconfigure -f noninteractive tzdata
 apt-get upgrade -y 
 hostnamectl set-hostname focal
-sudo apt-get install wireless-tools iw xubuntu-desktop lxdm -y
+sudo apt-get install htop -y
 apt-get -f install
 apt-get clean
 adduser focal
