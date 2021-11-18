@@ -33,5 +33,5 @@ addgroup focal adm
 addgroup focal users
 +
 chmod +x  /home/config.sh
-sudo cp  /home/config.sh focal/home
-chroot focal /bin/sh -i ./home/config.sh
+sudo cp  /home/config.sh /focal/home
+chroot /focal /bin/sh -i ./home/config.sh
